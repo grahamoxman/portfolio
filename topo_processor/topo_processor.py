@@ -1,6 +1,5 @@
 import arcpy
-from arcpy.sa import *
-# from arcpy.sa import Raster
+from arcpy.sa import Raster, Slope, Aspect  # Add other tools as needed
 import arcpy.ia
 import argparse
 import os
