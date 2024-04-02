@@ -1,0 +1,7 @@
+# ignore spatial files
+*.shp
+*.dbf
+*.prj
+
+# ignore temp files
+temp/
