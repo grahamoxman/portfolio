@@ -9,7 +9,7 @@ class pa(base):
     source = 'pasda'
     state = 'pa'
     iso = 'pjm'
-    alias_file = r"C:\Users\GrahamOxman\r3\projects\future_opp\alias_file_pa.csv"
+    alias_file = "alias_file_pa.csv"
 
     def aliases(self, merged_df):
         aliases = pd.read_csv(self.alias_file, na_values=[], keep_default_na=False)
@@ -34,8 +34,8 @@ class pa(base):
 
     def extract(self):
         shp_paths = [
-            r"C:\Users\GrahamOxman\OneDrive - R3 Renewables\GIS\Projects\zOther_GIS_Requests\Future_Opportunities\archive\01_Archive\01_Incoming\State Datasets\Pennsylvania_Coal_data_DEP\Bituminous_Surface_Mine_Permits_202301\Bituminous_Surface_Mine_Permits_202301.shp",
-            r'C:\Users\GrahamOxman\OneDrive - R3 Renewables\GIS\Projects\zOther_GIS_Requests\Future_Opportunities\archive\01_Archive\01_Incoming\State Datasets\Pennsylvania_Coal_data_DEP\Anthracite_Surface_Mine_Permits_202212\Anthracite_Surface_Mine_Permits_202212.shp'
+            "Bituminous_Surface_Mine_Permits_202301.shp",
+            'Anthracite_Surface_Mine_Permits_202212.shp'
         ]
 
         fields = {

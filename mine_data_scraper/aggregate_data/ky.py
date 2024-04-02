@@ -6,7 +6,7 @@ class ky(base):
     source = 'eppc'
     state = 'ky'
     iso = 'pjm'
-    alias_file = r"C:\Users\GrahamOxman\r3\projects\future_opp\alias_file_ky.csv"
+    alias_file = "alias_file_ky.csv"
 
     def aliases(self, merged_df):
         aliases = pd.read_csv(self.alias_file, na_values=[], keep_default_na=False)
@@ -30,7 +30,7 @@ class ky(base):
 
 
     def extract(self):
-        shp = r'C:/Users/GrahamOxman/OneDrive - R3 Renewables/GIS/Projects/zOther_GIS_Requests/Future_Opportunities/archive/01_Archive/01_Incoming/State Datasets/Kentucky_Mine_Data/MinedOutAreas/MinedOutAreas/MinedOutAreas.shp'
+        shp = 'MinedOutAreas.shp'
         
         fields = {
             "geometry": "geometry",

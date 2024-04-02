@@ -6,17 +6,11 @@ class oh(base):
     source = 'ohdnr'
     state = 'oh'
     iso = 'pjm'
-    alias_file = r"C:\Users\GrahamOxman\r3\projects\future_opp\alias_file_oh.csv"
+    alias_file = "alias_file_oh.csv"
 
     def aliases(self, merged_df):
         aliases = pd.read_csv(self.alias_file, na_values=[], keep_default_na=False)
         print(aliases.columns)
-
-        
-        print("Unique values in 'aliases' DataFrame:")
-        print(aliases['operator'].unique())
-        print("\nUnique values in 'merged_df' DataFrame:")
-        print(merged_df['operator'].unique())
 
         for col in merged_df.columns:
             if col in aliases:
@@ -29,8 +23,8 @@ class oh(base):
         return merged_df
 
     def extract(self):
-        shp = r"C:\Users\GrahamOxman\OneDrive - R3 Renewables\GIS\Projects\zOther_GIS_Requests\Future_Opportunities\archive\01_Archive\01_Incoming\State Datasets\Ohio_Mine_Data_DNR\Surf_CMO\Surf_CMO.shp"
-        reclaim = r"C:/Users/GrahamOxman/OneDrive - R3 Renewables/GIS/Projects/zOther_GIS_Requests/Future_Opportunities/archive/01_Archive/01_Incoming/State Datasets/Ohio_Mine_Data_DNR/Land_Rec/Land_Rec.shp"
+        shp = r"Surf_CMO.shp"
+        reclaim = r"Land_Rec.shp"
 
         fields = {
             "geometry": "geometry",

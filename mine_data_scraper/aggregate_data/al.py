@@ -6,17 +6,11 @@ class al(base):
     source = 'asmc'
     state = 'al'
     iso = 'serc'
-    alias_file = r"C:\Users\GrahamOxman\r3\projects\future_opp\alias_file_al.csv"
+    alias_file = "alias_file_al.csv"
 
     def aliases(self, merged_df):
         aliases = pd.read_csv(self.alias_file, na_values=[], keep_default_na=False)
         print(aliases.columns)
-
-        
-        # print("Unique values in 'aliases' DataFrame:")
-        # print(aliases['operator'].unique())
-        # print("\nUnique values in 'merged_df' DataFrame:")
-        # print(merged_df['operator'].unique())
 
         for col in merged_df.columns:
             if col in aliases:
@@ -29,9 +23,9 @@ class al(base):
         return merged_df
 
     def extract(self):
-        gdb1 = r"C:\Users\GrahamOxman\Desktop\projects\future_opp\merged_data\al_closed_mines.shp"
-        gdb2 = r"C:\Users\GrahamOxman\Desktop\projects\future_opp\merged_data\al_active_mines.shp"
-        gdb3 = r"C:\Users\GrahamOxman\Desktop\projects\future_opp\merged_data\al_expired_mines.shp"
+        gdb1 = "al_closed_mines.shp"
+        gdb2 = "al_active_mines.shp"
+        gdb3 = "al_expired_mines.shp"
         
 
         fields = {

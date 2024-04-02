@@ -7,7 +7,7 @@ class wv(base):
 
     
     def extract(self):
-        shp = r'C:\Users\GrahamOxman\OneDrive - R3 Renewables\GIS\Projects\zOther_GIS_Requests\Future_Opportunities\01_Archive\01_Incoming\State Datasets\West_Virginia_Mine_Data_DEP\WVDEP_Mining Reclamation\underground mining limits.shp'
+        shp = 'underground_mining_limits.shp'
         
         fields = {
             "geometry": "geometry",
