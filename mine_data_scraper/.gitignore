@@ -1,0 +1,7 @@
+# ignore spatial files
+*.shp
+*.prj
+*.dbf
+
+#ignore weird Mac file
+.DS_Store
