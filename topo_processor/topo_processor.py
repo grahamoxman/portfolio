@@ -4,6 +4,15 @@ import arcpy.ia
 import argparse
 import os
 
+
+"""
+This script processes DEM data to generate slope analysis, contour lines, and slope classification polygons. 
+Users provide input parameters such as user details, project folder, data source info, DEM location, projection, 
+and output folder. It includes functions for geodatabase creation, DEM preparation, slope calculation, reclassification, 
+field joining, raster-to-polygon conversion, and polygon manipulation. Users can choose to generate contour lines and 
+polygons.
+"""
+
 USER = arcpy.GetParameterAsText(0)
 PROJECT_FOLDER = arcpy.GetParameterAsText(1)
 SOURCE_NAME = arcpy.GetParameterAsText(2)

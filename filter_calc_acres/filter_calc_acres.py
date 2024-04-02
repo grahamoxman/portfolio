@@ -4,6 +4,22 @@ import os
 import pandas as pd
 import shutil
 
+"""
+This script is used for intersecting multiple shapefiles with an Area of Interest (AOI), filtering the features by attribute values, calculating the total acreage of the intersections, and generating CSV files with the results.
+
+The script defines several functions:
+
+- clear_directory: Deletes all files and directories in the specified directory.
+- read_shapefile: Reads a shapefile into a GeoDataFrame.
+- generate_csv: Generates a CSV file with the specified data.
+- intersect_with_aoi: Intersects a shapefile with an AOI, filters the features by attribute value, calculates the total acreage of the intersection, and generates a CSV file with the results.
+- main: Main function to intersect multiple shapefiles with an AOI, filter the features by attribute values, calculate the total acreage of the intersections, and generate CSV files with the results.
+
+The script uses argparse to parse command line arguments for the AOI shapefile, the shapefiles to intersect with the AOI, the output folder, the attribute name to filter by, and the attribute values to filter by.
+
+The script is executed from the command line and requires the geopandas, argparse, os, pandas, and shutil libraries.
+"""
+
 
 def clear_directory(directory):
     """

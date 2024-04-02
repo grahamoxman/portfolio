@@ -6,6 +6,21 @@ import geopandas as gpd
 import numpy as np
 
 
+"""
+This script is used for processing raster data based on an Area of Interest (AOI). It includes functions to load the AOI, find rasters that intersect with the AOI, and extract specific values from those rasters to create new rasters.
+
+The script defines several functions:
+
+- load_aoi: Loads an AOI from a file into a GeoDataFrame.
+- get_intersecting_rasters: Finds rasters in a specified folder that intersect with the AOI.
+- extract_values_and_create_new_raster: Extracts specific values from the intersecting rasters and creates new rasters with those values.
+- main: Main function to load the AOI, find intersecting rasters, and extract specific values from those rasters.
+
+The script uses argparse to parse command line arguments for the AOI file, the raster folder, the output folder, and the specific values to extract from the rasters.
+
+The script is executed from the command line and requires the os, argparse, osgeo, shapely, geopandas, and numpy libraries.
+"""
+
 def load_aoi(aoi_file):
     """
     Loads an Area of Interest (AOI) from a file.
